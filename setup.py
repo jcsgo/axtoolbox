@@ -6,20 +6,6 @@ Parts of this file were taken from the pyzmq project
 BSD license. Parts are from lxml (https://github.com/lxml/lxml)
 """
 
-DISTNAME = 'axtoolbox'
-LICENSE = 'BSD'
-AUTHOR = "John C. S. Go"
-EMAIL = "johngo88@gmail.com"
-URL = "https://github.com/jcsgo/axtoolbox"
-DOWNLOAD_URL = ''
-CLASSIFIERS = [
-    'Development Status :: 1 - Alpha/Unstable',
-    'Environment :: Console',
-    'Operating System :: OS Independent',
-    'Intended Audience :: Business/Analytics',
-    'Programming Language :: Python :: 3.7',
-    'Topic :: Business Intelligence']
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -51,6 +37,7 @@ VERSION = None
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
+    'Crypto>=1.4.1'
 ]
 
 # What packages are optional?
