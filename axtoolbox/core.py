@@ -24,7 +24,7 @@ def setup_encryption(varname:str, homedir:str="~"):
 	print('Your key is: ', key)
 
 	import os
-	path = os.chdir(homedir)
+	path = os.chdir(os.path.expanduser(homedir))
 	f= open("axtoolbox.config","w+")
 	f.write(varname, ' ', encryption_method, ' ', key)
 	f.close()
