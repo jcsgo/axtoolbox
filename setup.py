@@ -31,7 +31,7 @@ once more functions are uploaded
 URL = 'https://github.com/jcsgo/axtoolbox'
 EMAIL = 'johngo88@gmail.com'
 AUTHOR = 'John C. S. Go'
-REQUIRES_PYTHON = '>=3.7.0'
+REQUIRES_PYTHON = '>=3.6.8'
 VERSION = None
 
 # What packages are required for this module to be executed?
