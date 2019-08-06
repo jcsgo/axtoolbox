@@ -67,7 +67,9 @@ def get_decryption(varname: str):
     line = f.read()
     password = decrypt_text(line)
     f.close()
-    return password
 
     # return to original wd
     os.chdir(cwd)
+
+    # return password
+    return password
