@@ -12,7 +12,6 @@
 from Crypto.Cipher import AES
 import os
 
-
 def encrypt_text(password):
     obj = AES.new('a$j*$%!GEer9#45%', AES.MODE_CFB, 'o%r_#D&JD^%DHKds')
     ciphertext = obj.encrypt(password.encode('utf-8'))
@@ -26,6 +25,7 @@ def decrypt_text(encrypted_password):
 
 
 def setup_encryption(varname: str):
+    cwd = os.getcwd()
     value_prompt = "Please enter your {varname}: ".format(varname=varname)
     ciphertext = encrypt_text(input(value_prompt))
 
@@ -46,8 +46,12 @@ def setup_encryption(varname: str):
     # indicate the file has been written
     print(config_name + ' successfully obscured.')
 
+    # return to original wd
+    os.chdir(cwd)
+
 
 def get_decryption(varname: str):
+    cwd = os.getcwd()
     # define path where config file is stored
     path = os.path.join(os.path.expanduser('~'), 'axtoolbox')
     if not os.path.exists(path):
@@ -63,3 +67,6 @@ def get_decryption(varname: str):
     password = decrypt_text(line)
     f.close()
     return password
+
+    # return to original wd
+    os.chdir(cwd)
