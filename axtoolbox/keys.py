@@ -12,6 +12,7 @@
 from Crypto.Cipher import AES
 import os
 
+
 def encrypt_text(password):
     obj = AES.new('a$j*$%!GEer9#45%', AES.MODE_CFB, 'o%r_#D&JD^%DHKds')
     ciphertext = obj.encrypt(password.encode('utf-8'))
