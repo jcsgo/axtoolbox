@@ -28,7 +28,7 @@ axt.setup_encryption('example-username')
 ```
 You will be asked to type in your password/or the text you want to store under this name.
 
-### Using `axtoolbox` To Store Passwords
+### Using `axtoolbox` To Call Stored Passwords
 After setup above and also on your python console:
 ```
 import axtoolbox as axt
